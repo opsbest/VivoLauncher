@@ -1,0 +1,29 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-page {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.login-page-explain {
+  text-align: center;
+}
+
+.login-page-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-error {
+  margin-top: 6px;
+  color: #ff6b6b;
+  -webkit-text-fill-color: #ff6b6b;
+}

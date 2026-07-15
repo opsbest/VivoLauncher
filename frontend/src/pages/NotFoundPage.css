@@ -1,0 +1,11 @@
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error-menu {
+  text-align: center;
+  padding: 30px;
+}
