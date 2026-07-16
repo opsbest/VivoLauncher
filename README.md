@@ -4,7 +4,7 @@
 
 # Vivo Launcher v0.1.0
 
-<p>A cracked minecraft launcher.</p>
+<p>A cracked open source minecraft launcher.</p>
 
 <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&amp;logo=react&amp;logoColor=%2361DAFB" alt="React">
 <img src="https://img.shields.io/badge/c%23-blue?style=for-the-badge&logo=cplusplus" alt="Badge">
