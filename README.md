@@ -13,6 +13,9 @@
 
 <hr>
 
-<p>Uygulama henüz beta aşamasında olduğu için irili ufaklı bazı hatalar (bug'lar) bulunabilir veya arayüzde dil tutarsızlıkları görülebilir. Yakın zamanda tüm bu sorunlar giderilecek ve proje altyapısı tamamen düzenlenerek optimize edilecektir.</p>
+<p>🇹🇷: Uygulama henüz beta aşamasında olduğu için irili ufaklı bazı hatalar (bug'lar) bulunabilir veya arayüzde dil tutarsızlıkları görülebilir. Yakın zamanda tüm bu sorunlar giderilecek ve proje altyapısı tamamen düzenlenerek optimize edilecektir.
+
+🇬🇧:Since the application is in the beta phase, there may be minor or major bugs, or inconsistencies in the language used in the interface. All these issues will be resolved soon, and the project infrastructure will be cleaned up and optimized.
+</p>
 
 </div>
