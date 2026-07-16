@@ -9,6 +9,10 @@
 <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&amp;logo=react&amp;logoColor=%2361DAFB" alt="React">
 <img src="https://img.shields.io/badge/c%23-blue?style=for-the-badge&logo=cplusplus" alt="Badge">
 <img src="https://img.shields.io/badge/cmllib.core-41bc64?style=for-the-badge&logo=" alt="Badge">
+<p>
+  <img src="https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge&logo=nologo" alt="Badge">
+  <img src="https://img.shields.io/github/stars/opsbest/VivoLauncher?style=for-the-badge&color=gold" alt="Stars">
+</p>
 
 
 <hr>
