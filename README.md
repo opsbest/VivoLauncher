@@ -13,4 +13,6 @@
 
 <hr>
 
+<p>Uygulama henüz beta aşamasında olduğu için irili ufaklı bazı hatalar (bug'lar) bulunabilir veya arayüzde dil tutarsızlıkları görülebilir. Yakın zamanda tüm bu sorunlar giderilecek ve proje altyapısı tamamen düzenlenerek optimize edilecektir.</p>
+
 </div>
