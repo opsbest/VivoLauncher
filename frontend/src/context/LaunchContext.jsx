@@ -4,11 +4,6 @@ import { onHostMessage } from '../bridge.js'
 const LaunchContext = createContext(null)
 
 const initialState = {
-  // idle      -> henüz oynanmadı, "play now" aktif
-  // launching -> indiriliyor/başlatılıyor
-  // running   -> Minecraft açık
-  // exited    -> Minecraft kapatıldı (bu oturumda tekrar oynanamaz)
-  // error     -> gerçek bir başlatma hatası oldu, tekrar denenebilir
   phase: 'idle',
   progress: 0,
   statusText: '',
@@ -39,10 +34,6 @@ export function LaunchProvider({ children }) {
             return { ...prev, phase: 'running', progress: 100, statusText: 'Minecraft açık' }
 
           case 'launchError':
-            // Host, oyun zaten çalışırken/kapandıktan sonra gelen ikinci bir
-            // "launch" isteğini de bu mesajla reddediyor. Böyle bir durumda
-            // ekrandaki sabit "çalışıyor / kapatıldı" mesajını bozmuyoruz;
-            // sadece gerçek ilk deneme başarısız olduysa hata ekranına geçiyoruz.
             if (prev.phase === 'launching' || prev.phase === 'idle') {
               return {
                 ...prev,
