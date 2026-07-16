@@ -2,8 +2,6 @@ namespace VivoLauncher;
 
 internal static class Program
 {
-    // Sabit bir isim: bilgisayarda aynı anda ikinci bir launcher penceresi
-    // açılmasını engellemek için kullanılıyor.
     private const string SingleInstanceMutexName = "Global\\VivoLauncher-SingleInstance-9F3B2C11";
 
     [STAThread]
@@ -24,7 +22,6 @@ internal static class Program
         ApplicationConfiguration.Initialize();
         Application.Run(new MainForm());
 
-        // Uygulama kapanana kadar mutex'i elimizde tutuyoruz (using bloğu sayesinde).
         GC.KeepAlive(mutex);
     }
 }
