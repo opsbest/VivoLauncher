@@ -19,21 +19,12 @@
     <PackageReference Include="CmlLib.Core" Version="4.0.6" />
   </ItemGroup>
 
-  <!-- The built React frontend (npm run build output) lives in wwwroot.
-       It is copied next to the executable so WebView2 can serve it through
-       a virtual host mapping (see MainForm.cs). -->
   <ItemGroup>
     <Content Include="wwwroot\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
-  <!-- The Microsoft.Web.WebView2 NuGet package ships both a WinForms and a
-       WPF control assembly. The WPF one references WindowsBase 5.0.0.0,
-       which conflicts with net8.0-windows' own WindowsBase 4.0.0.0 and
-       produces an MSB3277 warning at build time. We only use the WinForms
-       control, so <UseWPF>false</UseWPF> above plus this target (belt and
-       suspenders) make sure the WPF assembly is never pulled in. -->
   <Target Name="RemoveWebView2WpfReference" AfterTargets="ResolveAssemblyReferences">
     <ItemGroup>
       <ReferencePath Remove="@(ReferencePath)" Condition="'%(FileName)' == 'Microsoft.Web.WebView2.Wpf'" />
