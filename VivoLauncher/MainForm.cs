@@ -19,7 +19,6 @@ public class MainForm : Form
         Height = 600;
         StartPosition = FormStartPosition.CenterScreen;
 
-        // Sabit boyut: büyütme (maximize) ve pencere yeniden boyutlandırma kapalı.
         FormBorderStyle = FormBorderStyle.FixedSingle;
         MaximizeBox = false;
         MinimizeBox = true;
@@ -49,8 +48,6 @@ public class MainForm : Form
             _webView.CoreWebView2.SetVirtualHostNameToFolderMapping(
                 "appassets.local", wwwroot, CoreWebView2HostResourceAccessKind.Allow);
 
-            // Sağ tık menüsü, F12/DevTools, Ctrl+Shift+I gibi kısayollar ve
-            // link üstüne gelince sol altta çıkan durum çubuğu (status bubble) kapalı.
             var settings = _webView.CoreWebView2.Settings;
             settings.AreDefaultContextMenusEnabled = false;
             settings.AreDevToolsEnabled = false;
@@ -60,9 +57,6 @@ public class MainForm : Form
             settings.IsBuiltInErrorPageEnabled = false;
             settings.IsSwipeNavigationEnabled = false;
 
-            // Uygulama sadece kendi arayüzünü göstermeli; bir buton/resim
-            // sürüklenip bırakıldığında ya da başka bir şekilde harici bir
-            // adrese (ör. google.com) gitmeye çalışılırsa engelle.
             _webView.CoreWebView2.NavigationStarting += (_, navArgs) =>
             {
                 if (!navArgs.Uri.StartsWith("https://appassets.local/", StringComparison.OrdinalIgnoreCase))
@@ -70,7 +64,6 @@ public class MainForm : Form
             };
             _webView.CoreWebView2.NewWindowRequested += (_, newWindowArgs) =>
             {
-                // Yeni pencere/sekme açmayı da engelle (ör. target=_blank linkler).
                 newWindowArgs.Handled = true;
             };
 
