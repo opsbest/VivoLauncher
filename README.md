@@ -11,7 +11,7 @@
 <img src="https://img.shields.io/badge/cmllib.core-41bc64?style=for-the-badge&logo=" alt="Badge">
 <p>
   <img src="https://img.shields.io/badge/version-0.1.0 BETA-blue?style=for-the-badge&logo=nologo" alt="Badge">
-  <img src="https://img.shields.io/github/stars/opsbest/VivoLauncher?style=for-the-badge&color=gold" alt="Stars">
+  [![Stars](https://img.shields.io/github/stars/opsbest/VivoLauncher?style=for-the-badge&color=gold)](https://github.com/opsbest/VivoLauncher)
 </p>
 
 
