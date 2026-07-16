@@ -1,8 +1,3 @@
-// Simple bridge between the React UI and the C# WinForms host (WebView2).
-// The host listens for messages via CoreWebView2.WebMessageReceived and
-// replies with CoreWebView2.PostWebMessageAsJson, which raises the
-// 'message' event on window.chrome.webview here.
-
 const listeners = new Set()
 
 function hasHost() {
@@ -14,7 +9,6 @@ export function sendToHost(type, payload = {}) {
   if (hasHost()) {
     window.chrome.webview.postMessage(message)
   } else {
-    // Running in a normal browser (e.g. `npm run dev`) without the C# host.
     console.warn('[bridge] host not available, message not sent:', message)
   }
 }
