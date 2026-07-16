@@ -14,13 +14,7 @@ export default function MainPage() {
   const { username, setUsername } = useUser()
   const navigate = useNavigate()
 
-  // Oyun bu oturumda sadece bir kez başlatılabilir; ikinci kez basılsa da
-  // C# tarafı zaten reddediyor, burada da butonu kalıcı olarak kilitliyoruz.
-  // Bu durum artık LaunchContext'te tutulduğu için sayfa değiştirip geri
-  // gelince (Patch Notes / Announce) sıfırlanmıyor.
   const playDisabled = phase !== 'idle' && phase !== 'error'
-  // Play now'a basıldıktan sonra (indirirken, oynarken ya da kapandıktan
-  // sonra) hesap değiştirilemesin.
   const switchAccountDisabled = phase === 'launching' || phase === 'running' || phase === 'exited'
 
   const handlePlay = () => {
